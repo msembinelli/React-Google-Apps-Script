@@ -2,10 +2,10 @@
 
 _Use this demo project as your boilerplate preact app for HTML dialogs in Google Sheets, Docs and Forms._
 
-This project uses labnol's excellent [apps-script-starter](https://github.com/labnol/apps-script-starter) and enuchi's [React-Google-Apps-Script](https://github.com/enuchi/React-Google-Apps-Script.git) as a starting point, adding support for Typescript and Preact. It demonstrates how easy it is to build React apps that interact with Google Apps server-side scripts. Simply clone this project and modify the source code to get started developing with React for Google Apps Script client-side dialogs.
+This project uses labnol's excellent [apps-script-starter](https://github.com/labnol/apps-script-starter) and enuchi's [React-Google-Apps-Script](https://github.com/enuchi/React-Google-Apps-Script.git) as a starting point, adding support for Typescript and Preact. It demonstrates how easy it is to build React apps that interact with Google Apps server-side scripts. Simply clone this project and modify the source code to get started developing with Preact for Google Apps Script client-side dialogs.
 
-![Google Apps Script / Preact development](https://i.imgur.com/LGPqfYE.png 'Start a React project for Google Apps Script')
-_The demo app for Google Sheets shows insertion/deletion/activation of sheets through React-built HTML dialog._
+![Google Apps Script / Preact development](https://i.imgur.com/LGPqfYE.png 'Start a Preact project for Google Apps Script')
+_The demo app for Google Sheets shows insertion/deletion/activation of sheets through Preact-built HTML dialog._
 
 ## Installation
 
@@ -26,7 +26,7 @@ _The demo app for Google Sheets shows insertion/deletion/activation of sheets th
 > npm run login
 ```
 
-4. Create a new Google Sheets file and a bound Google Scripts project for your React project:
+4. Create a new Google Sheets file and a bound Google Scripts project for your Preact project:
 
 ```
 > npm run setup
@@ -42,7 +42,7 @@ You've created a new Sheet and attached Script file! (But they're still empty fo
 > npm run deploy
 ```
 
-You can now visit your Google Sheet and see your new React app.
+You can now visit your Google Sheet and see your new Preact app.
 
 ### Using an existing Sheet
 
@@ -57,11 +57,11 @@ Paste the `scriptId` into the `.clasp.json` file. \*Make sure to include `"rootD
 
 ### Making changes to the code
 
-Modify the server-side and client-side source code in the `src` folder using ES6/7 and React. Change the scopes in `appsscript.json` if needed. When you're ready, build the app and deploy! You can run `npm run deploy` to build and deploy, or `npm run build` just to build the bundled files in the `./dist` directory.
+Modify the server-side and client-side source code in the `src` folder using ES6/7 and Preact. Change the scopes in `appsscript.json` if needed. When you're ready, build the app and deploy! You can run `npm run deploy` to build and deploy, or `npm run build` just to build the bundled files in the `./dist` directory.
 
 ## The sample app
 
-Insert/activate/delete sheets through a simple HTML dialog, built with React. Access the dialog through the new menu item that appears. You may need to refresh the spreadsheet and approve the app's permissions the first time you use it.
+Insert/activate/delete sheets through a simple HTML dialog, built with Preact. Access the dialog through the new menu item that appears. You may need to refresh the spreadsheet and approve the app's permissions the first time you use it.
 
 ## How it works
 
@@ -77,7 +77,7 @@ On the client-side, Google Apps Scripts has restrictions on the way HTML dialogs
 <link rel="stylesheet" href="styles.css">
 ```
 
-in the Google Apps Script environment you need to use [HTML templates](https://developers.google.com/apps-script/guides/html/templates), which can be cumbersome to work with. With this project, all files are bundled together by inlining .css and .js files. Using a transpiler and bundling tool also allows us to use JSX syntax, and external libraries such as React.
+in the Google Apps Script environment you need to use [HTML templates](https://developers.google.com/apps-script/guides/html/templates), which can be cumbersome to work with. With this project, all files are bundled together by inlining .css and .js files. Using a transpiler and bundling tool also allows us to use JSX syntax, and external libraries such as Preact.
 
 ## Features
 
