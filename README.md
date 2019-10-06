@@ -219,17 +219,16 @@ Now we can use familiar Promises in our client-side code and have easy access to
 - Use newer ES6/7 code, including arrow functions, spread operators, `const`/`let`, and more:
 
 ```
-const getSheetsData = () => {
-  let activeSheetName = getActiveSheetName();
+function getSheetsData() {
+  const activeSheetName = getActiveSheetName();
   return getSheets().map((sheet, index) => {
-    let sheetName = sheet.getName();
+    const sheetName = sheet.getName();
     return {
       text: sheetName,
       sheetIndex: index,
       isActive: sheetName === activeSheetName,
     };
   });
-};
 ```
 
 ## Extending this app
@@ -265,23 +264,20 @@ const clientConfig = Object.assign({}, sharedConfigSettings, {
 This project now supports multiple dialogs and sidebars. Here is an example of the `server` code for a 'main.html' dialog and an 'about.html' sidebar:
 
 ```
-// ./src/server/sheets-utilities.js
+// ./src/server/code.ts
 
-const openDialog = () => {
+function openDialog() {
   const html = HtmlService.createHtmlOutputFromFile('main')
     .setWidth(400)
     .setHeight(600);
-  SpreadsheetApp
-    .getUi() // Or DocumentApp or FormApp.
+  SpreadsheetApp.getUi() // Or DocumentApp or FormApp.
     .showModalDialog(html, 'Sheet Editor');
-};
+}
 
-const openAboutSidebar = () => {
+function openAboutSidebar() {
   const html = HtmlService.createHtmlOutputFromFile('about');
-  SpreadsheetApp
-    .getUi()
-    .showSidebar(html);
-};
+  SpreadsheetApp.getUi().showSidebar(html);
+}
 ```
 
 And here is the configuration in webpack that creates multiple html files. You will need to edit this if you want to add more dialog html files:
